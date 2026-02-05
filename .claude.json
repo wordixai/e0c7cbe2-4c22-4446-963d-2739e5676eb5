@@ -33,7 +33,9 @@
     ],
     "tengu_attribution_header": false,
     "tengu_workout": false,
-    "tengu_plan_mode_interview_phase": false
+    "tengu_plan_mode_interview_phase": false,
+    "tengu_file_write_optimization": false,
+    "tengu_cork_m4q": false
   },
   "userID": "9fc8246350adb9606e325af1ce32777eb8383c99f7b58b286890aac874e4a343",
   "firstStartTime": "2026-02-05T16:05:10.611Z",
@@ -43,6 +45,6 @@
   "thinkingMigrationComplete": true,
   "clientDataCache": {
     "data": null,
-    "timestamp": 1770307647525
+    "timestamp": 1770308311064
   }
 }

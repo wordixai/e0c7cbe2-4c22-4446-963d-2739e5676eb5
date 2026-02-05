@@ -27,7 +27,13 @@
     "tengu_cache_plum_violet": false,
     "tengu_streaming_tool_execution2": true,
     "tengu_marble_kite": false,
-    "tengu_tst_names_in_messages": false
+    "tengu_tst_names_in_messages": false,
+    "tengu_tool_search_unsupported_models": [
+      "haiku"
+    ],
+    "tengu_attribution_header": false,
+    "tengu_workout": false,
+    "tengu_plan_mode_interview_phase": false
   },
   "userID": "9fc8246350adb9606e325af1ce32777eb8383c99f7b58b286890aac874e4a343",
   "firstStartTime": "2026-02-05T16:05:10.611Z",
@@ -37,6 +43,6 @@
   "thinkingMigrationComplete": true,
   "clientDataCache": {
     "data": null,
-    "timestamp": 1770307511489
+    "timestamp": 1770308311064
   }
 }

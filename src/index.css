@@ -4,10 +4,237 @@
 
 @layer base {
   :root {
-   
+    /* 活力多彩色彩系统 */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+
+    /* 主色调 - 珊瑚红 */
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 28 100% 65%;
+
+    /* 辅助色 - 青绿 */
+    --secondary: 174 72% 56%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 207 90% 62%;
+
+    /* 强调色 */
+    --accent-purple: 271 91% 65%;
+    --accent-pink: 330 81% 60%;
+    --accent-orange: 25 95% 53%;
+    --accent-yellow: 48 100% 67%;
+
+    /* 功能色 */
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 0 84% 60%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --radius: 0.75rem;
+
+    /* 渐变 */
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(28 100% 65%) 50%, hsl(48 100% 67%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(174 72% 56%) 0%, hsl(207 90% 62%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(28 100% 65%) 25%, hsl(48 100% 67%) 50%, hsl(174 72% 56%) 75%, hsl(207 90% 62%) 100%);
+    --gradient-mesh:
+      radial-gradient(at 40% 20%, hsl(48 100% 67% / 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(174 72% 56% / 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(0 84% 60% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(271 91% 65% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(207 90% 62% / 0.2) 0px, transparent 50%);
+
+    /* 投影 */
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --shadow-elevated: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --shadow-colorful: 0 10px 30px -5px hsl(0 84% 60% / 0.35);
+    --shadow-colorful-secondary: 0 10px 30px -5px hsl(174 72% 56% / 0.35);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 0 84% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 0 84% 60%;
   }
 
   .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
 
+    --primary: 0 84% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 28 100% 70%;
+
+    --secondary: 174 72% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 207 90% 58%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 0 84% 65%;
+
+    --destructive: 0 63% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --gradient-mesh:
+      radial-gradient(at 40% 20%, hsl(48 100% 67% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(174 72% 56% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(0 84% 60% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(271 91% 65% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(207 90% 62% / 0.1) 0px, transparent 50%);
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 240 5% 84%;
+    --sidebar-primary: 0 84% 65%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 84%;
+    --sidebar-border: 220 13% 20%;
+    --sidebar-ring: 0 84% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  /* 渐变背景 */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  /* 渐变文字 */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-hero {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* 彩色投影 */
+  .shadow-colorful {
+    box-shadow: var(--shadow-colorful);
+  }
+
+  .shadow-colorful-secondary {
+    box-shadow: var(--shadow-colorful-secondary);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* 玻璃态效果 */
+  .glass {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* 动画 */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+
+  .animate-gradient {
+    animation: gradient 8s ease infinite;
+    background-size: 200% 200%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
